@@ -1,0 +1,17 @@
+name: "go-ci"
+on: [push]
+jobs: 
+  go18:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v3
+
+      - name: "go install"
+        uses: actions/go-setup@v3
+        with:
+          go-version: 1.18
+
+      - name: "go test"
+        run: "go test ."
+
