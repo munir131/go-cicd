@@ -11,3 +11,13 @@ func TestAdd(t *testing.T) {
 		t.Errorf("Ans should be %d", expected)
 	}
 }
+
+func TestAddFloat(t *testing.T) {
+	var n1 float32 = 1.5
+	var n2 float32 = 2.5
+	var expected float32 = 4.0
+	total := Add(n1, n2)
+	if expected != total {
+		t.Errorf("Ans should be %f != %f", expected, total)
+	}
+}

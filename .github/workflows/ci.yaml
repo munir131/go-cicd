@@ -15,3 +15,17 @@ jobs:
       - name: "go test"
         run: "go test ."
 
+  go17:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v3
+
+      - name: "go install"
+        uses: actions/setup-go@v3
+        with:
+          go-version: "1.17.0"
+
+      - name: "go test"
+        run: "go test ."
+
